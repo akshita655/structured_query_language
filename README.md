@@ -31,30 +31,6 @@ LeetCode-SQL/
 └── README.md
 ```
 
----
-
-## 🛠️ SQL Concepts Covered
-
-- SELECT Statements
-- WHERE Clause
-- ORDER BY
-- GROUP BY & HAVING
-- Aggregate Functions
-- INNER, LEFT, RIGHT & SELF JOIN
-- Subqueries
-- Common Table Expressions (CTEs)
-- Window Functions
-- CASE Expressions
-- EXISTS & IN
-- UNION & UNION ALL
-- String Functions
-- Date Functions
-- NULL Handling
-- Ranking Functions
-- Query Optimization
-
----
-
 ## 🎯 Objectives
 
 - Strengthen SQL fundamentals and advanced concepts.
@@ -88,13 +64,13 @@ LeetCode-SQL/
 Clone the repository:
 
 ```bash
-git clone https://github.com/<your-username>/LeetCode-SQL.git
+git clone https://github.com/<your-username>/structured_query_language.git
 ```
 
 Navigate to the repository:
 
 ```bash
-cd LeetCode-SQL
+cd structured_query_language
 ```
 
 Browse the solutions by difficulty and review the corresponding `.sql` files.
