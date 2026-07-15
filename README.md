@@ -23,16 +23,10 @@ The repository is continuously updated as I solve more SQL problems.
 LeetCode-SQL/
 │
 ├── Easy/
-│   ├── 175_Combine_Two_Tables.sql
-│   ├── 181_Employees_Earning_More_Than_Managers.sql
-│   └── ...
 │
 ├── Medium/
-│   ├── 176_Second_Highest_Salary.sql
-│   └── ...
 │
 ├── Hard/
-│   └── ...
 │
 └── README.md
 ```
