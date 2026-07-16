@@ -1,0 +1,17 @@
+### Problem Statement
+
+Write a SQL function `getNthHighestSalary(N)` that returns the **Nth highest distinct salary** from the `Employee` table.
+
+If there are fewer than **N distinct salaries**, the function should return **NULL**.
+
+### Solution
+
+```sql
+CREATE FUNCTION getNthHighestSalary(N INT) RETURNS INT
+BEGIN
+    set N = N - 1;
+  RETURN (
+      select distinct salary from employee order by salary desc limit N, 1
+
+  );
+END
