@@ -1,0 +1,12 @@
+# Rank Scores
+
+## Problem Summary
+Write a query to rank scores in descending order, assigning the same rank to identical scores without leaving gaps between ranks.
+
+## Solution
+```sql
+SELECT
+    score,
+    DENSE_RANK() OVER (ORDER BY score DESC) AS `rank`
+FROM Scores;
+```
