@@ -1,0 +1,12 @@
+# Customers Who Never Order
+
+## Problem Summary
+Write a query to find all customers who have never placed an order.
+
+## Solution
+
+```sql
+SELECT name AS Customers FROM Customers
+LEFT JOIN OrdersON Customers.id = Orders.customerId
+WHERE Orders.customerId IS NULL;
+```
