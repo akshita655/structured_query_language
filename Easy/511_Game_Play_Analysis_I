@@ -1,0 +1,11 @@
+# Game Play Analysis I
+
+## Problem Summary
+Write a query to find the first login date for each player.
+
+## Solution
+
+```sql
+SELECT player_id, MIN(event_date) AS first_login
+FROM Activity GROUP BY player_id;
+```
