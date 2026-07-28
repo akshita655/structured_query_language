@@ -1,0 +1,11 @@
+# Employee Bonus
+
+## Problem Summary
+Write a query to find the names and bonuses of employees whose bonus is less than 1000 or who have not received a bonus.
+
+## Solution
+
+```sql
+SELECT e.name, b.bonus FROM Employee e LEFT JOIN Bonus b
+ON e.empId = b.empId WHERE b.bonus < 1000 OR b.bonus IS NULL;
+```
