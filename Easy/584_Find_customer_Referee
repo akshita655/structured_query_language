@@ -1,0 +1,12 @@
+# Find Customer Referee
+
+## Problem Summary
+Write a query to find the names of customers who were not referred by the customer with ID 2.
+
+## Solution
+
+```sql
+SELECT name FROM Customer
+WHERE referee_id != 2
+OR referee_id IS NULL;
+```
