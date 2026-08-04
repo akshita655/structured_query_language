@@ -1,0 +1,11 @@
+# Managers with at Least 5 Direct Reports
+
+## Problem Summary
+Write a query to find the names of managers who have at least five direct reports.
+
+## Solution
+
+```sql
+SELECT e.name FROM Employee e INNER JOIN Employee m ON e.id = m.managerId
+GROUP BY m.managerId HAVING COUNT(*) >= 5;
+```
