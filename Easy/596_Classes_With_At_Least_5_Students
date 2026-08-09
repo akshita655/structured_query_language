@@ -1,0 +1,11 @@
+# Classes More Than 5 Students
+
+## Problem Summary
+Write a query to find all classes that have at least five students enrolled.
+
+## Solution
+
+```sql
+SELECTclass FROM Courses
+GROUP BY class HAVING COUNT(*) >= 5;
+```
