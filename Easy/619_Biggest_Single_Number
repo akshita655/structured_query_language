@@ -1,0 +1,14 @@
+# Biggest Single Number
+
+## Problem Summary
+Write a query to find the largest number that appears exactly once in the `MyNumbers` table.
+
+## Solution
+
+```sql
+SELECT MAX(num) AS num
+FROM (
+    SELECT num FROM MyNumbers
+    GROUP BY num HAVING COUNT(num) = 1
+) AS unique_numbers;
+```
