@@ -1,0 +1,13 @@
+# Not Boring Movies
+
+## Problem Summary
+Write a query to find movies with an odd-numbered ID and a description that is not `boring`, sorted by rating from highest to lowest.
+
+## Solution
+
+```sql
+SELECT * FROM Cinema
+WHERE id % 2 != 0
+AND description != 'boring'
+ORDER BY rating DESC;
+```
