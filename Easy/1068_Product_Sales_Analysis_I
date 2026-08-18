@@ -1,0 +1,11 @@
+# Product Sales Analysis III
+
+## Problem Summary
+Write a query to display each product name along with the year and price of its sales records.
+
+## Solution
+
+```sql
+SELECT p.product_name, s.year, s.price FROM Sales s
+LEFT JOIN Product p ON s.product_id = p.product_id;
+```
