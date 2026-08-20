@@ -1,0 +1,11 @@
+# Article Views I
+
+## Problem Summary
+Write a query to find authors who viewed at least one of their own articles, returning each author ID only once in ascending order.
+
+## Solution
+
+```sql
+SELECT DISTINCT author_id AS id FROM Views
+WHERE author_id = viewer_id ORDER BY id ASC;
+```
