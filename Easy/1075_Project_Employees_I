@@ -1,0 +1,11 @@
+# Project Employees I
+
+## Problem Summary
+Write a query to calculate the average experience of employees working on each project, rounded to two decimal places.
+
+## Solution
+
+```sql
+SELECT p.project_id, ROUND(AVG(e.experience_years), 2) AS average_years FROM Project p
+LEFT JOIN Employee e ON p.employee_id = e.employee_id GROUP BY p.project_id;
+```
