@@ -1,0 +1,11 @@
+# Patients With a Condition
+
+## Problem Summary
+Write a query to find patients whose medical conditions contain the code `DIAB1` as a standalone condition.
+
+## Solution
+
+```sql
+SELECT patient_id, patient_name, conditions FROM Patients
+WHERE conditions LIKE '% DIAB1%' OR conditions LIKE 'DIAB1%';
+```
