@@ -1,0 +1,18 @@
+# Friend Requests II: Who Has the Most Friends
+
+## Problem Summary
+Write a query to find the user who has the highest total number of accepted friend requests, considering both requesters and accepters.
+
+## Solution
+
+```sql
+SELECT id, COUNT(*) AS num
+FROM (
+    SELECT accepter_id AS id FROM RequestAccepted
+    UNION ALL
+    SELECT requester_id AS id FROM RequestAccepted
+) t
+GROUP BY id
+ORDER BY num DESC
+LIMIT 1;
+```
