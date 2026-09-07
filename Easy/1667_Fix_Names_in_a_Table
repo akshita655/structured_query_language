@@ -1,0 +1,15 @@
+# Fix Names in a Table
+
+## Problem Summary
+Write a query to format each user's name so that the first letter is uppercase and all remaining letters are lowercase, then sort the results by `user_id`.
+
+## Solution
+
+```sql
+SELECT user_id,
+    CONCAT(
+        UPPER(SUBSTR(name, 1, 1)),
+        LOWER(SUBSTR(name, 2))
+    ) AS name
+FROM users ORDER BY user_id ASC;
+```sql
