@@ -1,0 +1,11 @@
+# Invalid Tweets
+
+## Problem Summary
+Write a query to find the tweet_id of tweets whose content length is greater than 15 characters.
+
+## Solution
+
+```sql
+SELECT tweet_id FROM tweets
+WHERE LENGTH(content) > 15;
+```sql
