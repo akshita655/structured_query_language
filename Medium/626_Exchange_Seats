@@ -1,0 +1,12 @@
+# Exchange Seats
+
+## Problem Summary
+
+Write a query to swap the seats of every two consecutive students. The first student swaps with the second, the third with the fourth, and so on.
+
+## Solution
+
+```sql
+SELECT ROW_NUMBER() OVER() AS id, student
+FROM seat ORDER BY IF(MOD(id, 2) = 0, id - 1, id + 1);
+```
