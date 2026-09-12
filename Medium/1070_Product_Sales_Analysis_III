@@ -1,0 +1,12 @@
+# Product Sales Analysis III
+
+## Problem Summary
+
+Write a query to find the first year each product was sold, along with its product_id, quantity, and price.
+
+## Solution
+
+```sql
+select product_id, year as first_year, quantity, price from sales 
+where (product_id, year) in (select product_id, min(year) from sales group by product_id);
+```
