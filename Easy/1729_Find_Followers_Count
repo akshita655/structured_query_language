@@ -1,0 +1,11 @@
+# Find Followers Count
+
+## Problem Summary
+Write a query to find the number of followers for each user, and sort the results by user_id in ascending order.
+
+## Solution
+
+```sql
+SELECT user_id, COUNT(*) AS followers_count FROM followers
+GROUP BY user_id ORDER BY user_id ASC;
+```sql
