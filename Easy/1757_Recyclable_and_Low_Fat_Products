@@ -1,0 +1,11 @@
+# Recyclable and Low Fat Products
+
+## Problem Summary
+Write a query to find the product_id of products that are both low fat and recyclable.
+
+## Solution
+
+```sql
+SELECT product_id FROM Products
+WHERE low_fats = 'Y' AND recyclable = 'Y';
+```sql
