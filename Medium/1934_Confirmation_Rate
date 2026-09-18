@@ -1,0 +1,21 @@
+# Confirmation Rate
+
+## Problem Summary
+
+Write a query to calculate the confirmation rate for each user, rounded to 2 decimal places. Users with no confirmation records should also be included.
+
+## Solution
+
+```sql
+select s.user_id,
+round(
+    avg(
+        case
+            when c.action = 'confirmed' then 1
+            else 0
+        end
+    ), 2
+) as confirmation_rate
+from signups s left join confirmations c
+on s.user_id = c.user_id group by s.user_id;
+```
