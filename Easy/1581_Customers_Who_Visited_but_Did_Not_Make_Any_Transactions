@@ -1,0 +1,15 @@
+# Customer Who Visited but Did Not Make Any Transactions
+
+## Problem Summary
+Write a query to find the customer_id of customers who visited the store without making any transactions, along with the number of such visits (count_no_trans).
+Sort the results as required by the problem statement.
+
+## Solution
+
+```sql
+select v.customer_id, count(v.visit_id) as count_no_trans 
+from visits v left join transactions t
+on v.visit_id = t.visit_id 
+where t.transaction_id is NULL 
+group by v.customer_id;
+```
